@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSSure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body>
+    <section class="gamesub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <ion-icon class="fa" name="close-outline" onclick="hideMenu()"></ion-icon>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#about-us">ABOUT</a></li>
+                    <li><a href="game.html">PLAY GAME</a></li>
+                    <li><a href="course.html">START LEARNING</a></li>
+                    <li><a href="report.html">REPORT INCIDENT</a></li>
+                    
+                </ul>
+            </div>
+            <ion-icon class="fa" name="menu-outline" onclick="showMenu()"></ion-icon>
+        </nav>
+
+        <!-- <div class="text-box">
+            <h1>Game Environment</h1>
+
+            <a href=""class="hero-btn">JOIN US</a> -->
+        </div>
+        <div class="game-container">
+            <h1>Cybersecurity Learning Game</h1>
+            <div class="question">
+                <h2>Question:</h2>
+                <p id="question-text"></p>
+            </div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(0)"></button>
+                <button class="option" onclick="checkAnswer(1)"></button>
+                <button class="option" onclick="checkAnswer(2)"></button>
+                <button class="option" onclick="checkAnswer(3)"></button>
+            </div>
+            <div id="score">
+                <h3>Score: <span id="score-value">0</span>/<span id="total-score"></span></h3>
+            </div>
+            <button id="restart-btn" onclick="restartGame()">Restart Game</button>
+            </div>
+        </div>
+
+    </section>
+
+
+        <h1>Have You Experienced a Cybersecurity Incident? <br>
+            Report It Now!</h1>
+        <a href="" class="hero-btn">Report Incidence</a>
+    </section> -->
+
+    <section class="footer">
+        <div class="footer-container">
+            <div class="about-us">
+                <h4>About Us</h4>
+                <p>
+                    CyberSSure is a leading cybersecurity company dedicated to educating and 
+                    protecting educational institutions <br>
+                    and individuals from digital threats. 
+                    With a team of highly skilled experts and cutting-edge technology, <br> 
+                    we provide comprehensive solutions to safeguard your digital assets!
+                </p>
+            </div>
+            <div class="bottom-info">
+                <div class="contact-us">
+                    <h4>Contact Us</h4>
+                    <p>wizard@cyberssure.com</p>
+                </div>
+                <div class="social-media">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#"><ion-icon class="fab" name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon class="fab" name="logo-twitter"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+                
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 CybeSSure.</p>
+        </div>
+    </section>
+    
+    <!-- ------JS for Menu toggling------->
+
+<script>
+    var navLinks =document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0"
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px"
+    }
+</script>
+<script src="game.js"></script>
+</body>
+</html>
