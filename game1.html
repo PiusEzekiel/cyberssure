@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberSSure</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="game.css">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </head>
 <body>
-    <section class="reportsub-header">
+    <section class="gamesub-header">
         <nav>
             <a href="index.html"><img src="images/logo.png" alt=""></a>
             <div class="nav-links" id="navLinks">
@@ -26,26 +26,30 @@
             <ion-icon class="fa" name="menu-outline" onclick="showMenu()"></ion-icon>
         </nav>
 
-        <div class="report-container">
-            <h1>Incident Reporting</h1>
+        <!-- <div class="text-box">
+            <h1>Game Environment</h1>
+
+            <a href=""class="hero-btn">JOIN US</a> -->
+        </div>
+        <div class="game-container">
+            <h1>Cybersecurity Learning Quiz</h1>
             <div class="question">
-                <h2>Have you experienced a cybersecurity breach <br>
-                    or are you unsure and need an expert opinion?</h2>
+                <h2>Question:</h2>
+                <p id="question-text"></p>
             </div>
-            <div class="report-col" method="post">
-                <form action="form-handler.php">
-                    <input type="text" name="name" placeholder="Enter your name" required>
-                    <input type="email" name="email" placeholder="Enter email address" required>
-                    <input type="text" name="subject" placeholder="Title of Incident" required>
-                    <textarea rows="10" name="message" placeholder="Describe incidence" required></textarea>
-                    <button type="submit" class="hero-btn">Submit</button>
-                </form>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(0)"></button>
+                <button class="option" onclick="checkAnswer(1)"></button>
+                <button class="option" onclick="checkAnswer(2)"></button>
+                <button class="option" onclick="checkAnswer(3)"></button>
+            </div>
+            <div id="score">
+                <h3>Score: <span id="score-value">0</span>/<span id="total-score"></span></h3>
+            </div>
+            <button id="restart-btn" onclick="restartGame()">Restart Game</button>
             </div>
         </div>
-
-
     </section>
-
 
     <section class="footer" id="about-us">
         <div class="footer-container">
