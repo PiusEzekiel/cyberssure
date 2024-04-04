@@ -535,7 +535,7 @@ form .input-field input {
 }
 
 .input-field input:is(:focus, :valid) {
-    padding: 16px 10px 7px;
+    /* padding: 6px 10px 7px; */
     border-color: #ff7200;
 }
 
