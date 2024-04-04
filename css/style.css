@@ -9,7 +9,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -346,7 +346,7 @@ h3 {
 .cta {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(50,10,67, 0.7), rgba(236,208,248,0.1)), url(images/background2.jpg);
+    background-image: linear-gradient(rgba(50,10,67, 0.7), rgba(236,208,248,0.1)), url(../images/background2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;

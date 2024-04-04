@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberSSure</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/game.css">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </head>
 <body>
     <section class="gamesub-header">
         <nav>
-            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <a href="../index.html"><img src="../images/logo.png" alt=""></a>
             <div class="nav-links" id="navLinks">
                 <ion-icon class="fa" name="close-outline" onclick="hideMenu()"></ion-icon>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="../index.html">HOME</a></li>
                     <li><a href="#about-us">ABOUT</a></li>
-                    <li><a href="index.html#game">PLAY GAME</a></li>
-                    <li><a href="course.html">START LEARNING</a></li>
-                    <li><a href="report.html">REPORT INCIDENT</a></li>
+                    <li><a href="../index.html#game">PLAY GAME</a></li>
+                    <li><a href="../html/course.html">START LEARNING</a></li>
+                    <li><a href="../html/report.html">REPORT INCIDENT</a></li>
                     
                 </ul>
             </div>
@@ -32,22 +32,17 @@
             <a href=""class="hero-btn">JOIN US</a> -->
         </div>
         <div class="game-container">
-            <h1>Cybersecurity Learning Quiz</h1>
+            <h1>Under Construction</h1>
             <div class="question">
-                <h2>Question:</h2>
-                <p id="question-text"></p>
+                <ion-icon name="construct"></ion-icon>
+                <h2>Intermediate - CyberDenzel</h2>
+
             </div>
-            <div class="options">
-                <button class="option" onclick="checkAnswer(0)"></button>
-                <button class="option" onclick="checkAnswer(1)"></button>
-                <button class="option" onclick="checkAnswer(2)"></button>
-                <button class="option" onclick="checkAnswer(3)"></button>
-            </div>
-            <div id="score">
-                <h3>Score: <span id="score-value">0</span>/<span id="total-score"></span></h3>
-            </div>
-            <button id="restart-btn" onclick="restartGame()">Restart Game</button>
-            </div>
+
+        </div>
+        <div>
+            <a href="../html/game1.html"><button id="restart-btn">Play Available Game</button></a>
+            
         </div>
     </section>
 
@@ -94,6 +89,6 @@
         navLinks.style.right = "-200px"
     }
 </script>
-<script src="game.js"></script>
+<script src="../js/game.js"></script>
 </body>
 </html>

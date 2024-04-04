@@ -6,7 +6,7 @@ body {
 .reportsub-header {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(255,114,0.1), rgba(50,10,67, 0.7)), url(images/report.jpg);
+    background-image: linear-gradient(rgba(255,114,0.1), rgba(50,10,67, 0.7)), url(../images/report.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
