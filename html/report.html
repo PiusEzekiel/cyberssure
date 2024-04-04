@@ -32,8 +32,11 @@
                 <h2>Have you experienced a cybersecurity breach <br>
                     or are you unsure and need an expert opinion?</h2>
             </div>
-            <div class="report-col" method="post">
-                <form action="form-handler.php">
+            <div class="report-col">
+                <!-- <form action="https://api.web3forms.com/submit" method="POST"> -->
+                <form action="../php/form-handler.php" method="POST">
+
+                    <input type="hidden" name="access_key" value="c0a5d6f1-10b0-462c-9474-1170a48b3169">
                     <input type="text" name="name" placeholder="Enter your name" required>
                     <input type="email" name="email" placeholder="Enter email address" required>
                     <input type="text" name="subject" placeholder="Title of Incident" required>

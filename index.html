@@ -6,6 +6,7 @@
     <title>CyberSSure</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <section class="header">
@@ -35,9 +36,82 @@
                 needed to combat the rising threat of cyber attacks <br>
                 in the education sector
             </p>
-            <a href=""class="hero-btn">Login/ Register</a>
+            <div class="loginregister">
+                <button class="btnLogin-popup" id="login">Login / Register</button>
+            </div>
+            <!-- <a href=""class="hero-btn">Login/ Register</a> -->
         </div>
 
+    </section>
+
+        <!--Form Popup-->
+    <section>
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded"><ion-icon name="close-outline"></ion-icon></span>
+            <div class="form-box login">
+                <div class="form-content">
+                    <h2>Login CyberSure</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" name="" placeholder="Password" required>
+                        </div>
+                        
+                        <a href="#" class="forgot-pass">Forgot Password?</a>
+                        
+                        <button type="button" class="btnn"><a href="#">Login</a></button>
+
+                    </form>
+                    <div class="bottom-link">
+                        <p class="link">Don't have an account?<br>
+                        <a href="#" id="signup-link">Register</a></p>
+                        <p class="liw">Log in with</p>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="form-content">
+                    <h2>Signup CyberSure</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" name="" placeholder="Create password" required>
+                        </div>
+                        <div class="policy-text">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">
+                                I agree to the
+                                <a href="#">Terms & Conditions</a>
+                            </label>
+                        </div>
+                        <button type="button" class="btnn"><a href="#">Signup</a></button>
+
+                    </form>
+                    <div class="bottom-link">
+                        <p class="link">Already have an account?<br>
+                        <a href="#" id="login-link">Login</a></p>
+                        <p class="liw">Signup with</p>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- course section -->

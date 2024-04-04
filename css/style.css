@@ -448,3 +448,244 @@ h3 {
     margin-top: 100px;
     color: #ecd0f8;
 }
+
+
+
+/*form */
+
+.blur-bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    transition: o.1s ease;
+}
+
+.show-popup .blur-bg-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    max-width: 600px;
+    opacity: 0;
+    pointer-events: none;
+    color: aliceblue;
+    background: url(../images/login.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ecd0f8;
+    transform: translate( -50%, -100%);
+}
+
+
+.show-popup .form-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate( -50%, -50%);
+    transition: transform 0.3s ease, opacity 0.1s;
+}
+
+
+.form-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: #320a43;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.form-popup .form-box {
+    display: flex;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-box .form-content {
+    width: 100%;
+    padding: 35px;
+}
+
+form .input-field {
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+form .input-field input {
+    display: inline-flex;
+    width: 85%;
+    height: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 0.95em;
+    border-radius: 3px; 
+}
+
+.input-field input:is(:focus, :valid) {
+    padding: 16px 10px 7px;
+    border-color: #ff7200;
+}
+
+.form-box a {
+    color: #ff7200;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    color: #ecd0f8;
+    text-decoration: underline;
+}
+
+.form-box :where(.forgot-pass, .policy-text) {
+    display: inline-flex;
+    margin-top: 6px;
+    font-size: 0.8em;
+}
+
+form button {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 10px 0;
+    border-radius: 3px;
+    margin: 20px 0;
+    cursor: pointer;
+    background: #ecd0f8;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background-color: #320a43;
+}
+
+.form-box .bottom-link {
+    text-align: center;
+}
+
+.form-popup .signup,
+.form-popup.show-signup .login {
+    display: none;
+}
+
+.form-popup.show-signup .signup {
+    display: flex;
+}
+
+.form-box .icons {
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 15px;
+}
+
+.signup .policy-text {
+    display: flex;
+    align-items: center;
+}
+
+.signup .policy-text input {
+    width: 11px;
+    height: 11px;
+    margin-right: 7px;
+}
+
+@media (max-width: 700px) {
+    .form-popup {
+        width: min-content;
+    }
+    .form-box .form-details {
+        display: none;
+    }
+    .form-box .form-content {
+        padding: 30px 20px;
+    }
+    form .input-field input {
+        display: inline-flex;
+        width: min-content;
+        height: 100%;
+        outline: none;
+        padding: 0 15px;
+        font-size: 0.95em;
+        border-radius: 3px; 
+    }
+}
+
+
+/* Login button */
+
+
+/* .loginregister1 {
+    position: flex;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginregister1 .btnLogin-popup1 {
+    width: 200px;
+    min-width: 135px;
+    height: 70px;
+    background: #320a43;
+    backdrop-filter: blur(400px);
+    border: 5px solid #ecd0f8;
+    color: #ecd0f8;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-right: 100px;
+    transition: .3s;
+}
+
+
+.loginregister1 .btnLogin-popup1:hover {
+    background: #ecd0f8;
+    border: 5px solid #320a43;
+    color: #320a43;
+} */
+
+.btnLogin-popup{
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    background: transparent;
+    color: #ff7200;
+    border: 2px solid #ff7200;
+    padding: 10px 34px;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.btnLogin-popup:hover{
+    border: 2px solid #ecd0f8;
+    background-color: #ecd0f8;
+    transition: 1s;
+}
+
+
+
+
+

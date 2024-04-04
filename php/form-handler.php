@@ -1,26 +1,16 @@
 <?php
-$name = $_POST['name'];
-$visitor_email =$_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
 
-$email_from = 'wizard@cyberssure.com';
+$name = htmlspecialchars($_POST['name']);
+$visitor_email = htmlspecialchars($_POST['email']);
+$subject = htmlspecialchars($_POST['subject']);
+$message = htmlspecialchars($_POST['message']);
 
-$email_subject = 'New Incident Submitted on CyberSSure';
+$mailheader = "From:".$name."<."$visitor_email".>\r\n";
 
-$email_body = "User Name: $name.\n".
-            "User Email: $visitor_email.\n".
-            "Subject: $subject.\n".
-            "Message: $message.\n";
+$recipient = "e.pius1@alustudent.com";
 
-$to = 'e.pius1@alustudent.com';
 
-$headers = "From: $email_from \r\n";
+mail($recipient, $subject, $message, $mailheader) or die("Out of service!")
 
-$headers .= "Reply-To: $visitor_email \r\n";
-
-mail($to,$email_subject,$email_body,$headers);
-
-header("Location: contact.html");
+echo 'message sent successfully'
 ?>
-
