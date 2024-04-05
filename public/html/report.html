@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSSure</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/report.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body>
+    <section class="reportsub-header">
+        <nav>
+            <a href="/home"><img src="../images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <ion-icon class="fa" name="close-outline" onclick="hideMenu()"></ion-icon>
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="#about-us">ABOUT</a></li>
+                    <li><a href="/home#game">PLAY GAME</a></li>
+                    <li><a href="html/course.html">START LEARNING</a></li>
+                    <li><a href="html/report.html">REPORT INCIDENT</a></li>
+                    
+                </ul>
+            </div>
+            <ion-icon class="fa" name="menu-outline" onclick="showMenu()"></ion-icon>
+        </nav>
+
+        <div class="report-container">
+            <h1>Incident Reporting</h1>
+            <div class="question">
+                <h2>Have you experienced a cybersecurity breach <br>
+                    or are you unsure and need an expert opinion?</h2>
+            </div>
+            <div class="report-col">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- <form action="../php/form-handler.php" method="POST"> -->
+
+                    <input type="hidden" name="access_key" value="c0a5d6f1-10b0-462c-9474-1170a48b3169">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="email" name="email" placeholder="Enter email address" required>
+                    <input type="text" name="subject" placeholder="Title of Incident" required>
+                    <textarea rows="10" name="message" placeholder="Describe incidence" required></textarea>
+                    <button type="submit" class="hero-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section class="footer" id="about-us">
+        <div class="footer-container">
+            <div class="about-us">
+                <h4>About Us</h4>
+                <p>
+                    CyberSSure is a leading cybersecurity company dedicated to educating and 
+                    protecting educational institutions <br>
+                    and individuals from digital threats. 
+                    With a team of highly skilled experts and cutting-edge technology, <br> 
+                    we provide comprehensive solutions to safeguard your digital assets!
+                </p>
+            </div>
+            <div class="bottom-info">
+                <div class="contact-us">
+                    <h4>Contact Us</h4>
+                    <p>wizard@cyberssure.com</p>
+                </div>
+                <div class="social-media">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#"><ion-icon class="fab" name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon class="fab" name="logo-twitter"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+                
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 CybeSSure.</p>
+        </div>
+    </section>
+    
+    <!-- ------JS for Menu toggling------->
+
+<script>
+    var navLinks =document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0"
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px"
+    }
+</script>
+<script src="../js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSSure</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script defer src="../js/script.js" ></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="#"><img src="images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <ion-icon class="fa" name="close-outline" onclick="hideMenu()"></ion-icon>
+
+            </div>
+            <ion-icon class="fa" name="menu-outline" onclick="showMenu()"></ion-icon>
+        </nav>
+
+        <div class="text-box">
+            <h1> </h1>
+
+            <h1>Welcome to<br>
+                <span>CyberSSure</span> 
+                <br>Learning, Games &<br>
+            <span>Threat Awareness</span><br>
+            Platform
+        </h1>
+            <p>Get ready to bolster your institution's cybersecurity defenses and awareness with CyberSSure. <br>
+                Our comprehensive solution equips you with the tools and knowledge <br>
+                needed to combat the rising threat of cyber attacks <br>
+                in the education sector
+            </p>
+            <div class="loginregister">
+                <button class="btnLogin-popup" ><a href="/login" >Login / Register</a></button>
+            </div>
+            <!-- <a href=""class="hero-btn">Login/ Register</a> -->
+        </div>
+
+    </section>
+
+
+
+
+    
+    <!-- ------JS for Menu toggling------->
+<script>
+    var navLinks =document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0"
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px"
+    }
+</script>
+</body>
+</html>

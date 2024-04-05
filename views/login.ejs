@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login CyberSSure</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script defer src="../js/script.js" ></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="#"><img src="images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <ion-icon class="fa" name="close-outline" onclick="hideMenu()"></ion-icon>
+                <!-- <ul>
+                    <li><a href="#login">HOME</a></li>
+                    <li><a href="#about-us">ABOUT</a></li>
+                    <li><a href="/#game">PLAY GAME</a></li>
+                    <li><a href="html/course.html">START LEARNING</a></li>
+                    <li><a href="html/report.html">REPORT INCIDENT</a></li>
+                    
+                </ul> -->
+            </div>
+            <ion-icon class="fa" name="menu-outline" onclick="showMenu()"></ion-icon>
+        </nav>
+
+        <div class="text-box">
+            <h1></h1>
+
+            <h1>Enhancing <br><span>Cybersecurity</span> <br>Awareness in <br>
+            <span>Education</span></h1>
+            <p>Get ready to bolster your institution's cybersecurity defenses and awareness with CyberSSure. <br>
+                Our comprehensive solution equips you with the tools and knowledge <br>
+                needed to combat the rising threat of cyber attacks <br>
+                in the education sector
+            </p>
+            <div class="loginregister">
+                <button class="btnLogin-popup" >Login / Register</button>
+            </div>
+            <!-- <a href=""class="hero-btn">Login/ Register</a> -->
+        </div>
+
+    </section>
+
+        <!--Form Popup-->
+    <section>
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            
+            <!-- <span class="close-btn material-symbols-rounded"><ion-icon name="close-outline"></ion-icon></span> -->
+            <!-- <span class="close-btn material-symbols-rounded">
+                <ion-icon id="closeIcon" name="close-outline"></ion-icon>
+            </span> -->
+
+            <span class="close-btn material-symbols-rounded"><a href="/"><ion-icon id="closeIcon" name="close-outline"></ion-icon></a></span>
+            
+            <div class="form-box login">
+                <div class="form-content">
+                    <h2>Login CyberSure</h2>
+                    <form action="/login" method="POST" >
+
+                        <% if (messages.error) { %>
+                            <div class="alert alert-danger">
+                                <strong><%= messages.error %></strong>
+                            </div>
+
+                        <% } %>
+
+                        <div class="input-field">
+                            <input type="email" name="email" placeholder="Email" >
+                        </div>
+                        <div class="input-field">
+                            <input type="password" name="password" placeholder="Password" >
+                        </div>
+                        
+                        <a href="#" class="forgot-pass">Forgot Password?</a>
+                        
+                        <button type="submit" class="btnn">Login</button>
+
+                    </form>
+                    <div class="bottom-link">
+                        <p class="link">Don't have an account?<br>
+                        <a href="/register" >Register</a></p>
+                        <p class="liw">Log in with</p>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+
+<!-- signup register -->
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    
+    <!-- ------JS for Menu toggling------->
+<script>
+    var navLinks =document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0"
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px"
+    }
+</script>
+</body>
+</html>
