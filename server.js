@@ -21,7 +21,7 @@ initializePassport(
 
 const users = [];
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false}));
 app.use(flash());
 app.use(
     session({
@@ -41,19 +41,21 @@ app.set('view engine', 'ejs')
 app.set('views', 'views')
 app.use(express.static('views'))
 
-app.get("/", checkNotAuthenticated, (req, res) => {
+
+//I removed checkNotAuthenticated
+app.get("/", (req, res) => {
     return res.render("index.ejs");
 });
 
-// Configuring the login post functionality
-app.post("/login", checkNotAuthenticated, passport.authenticate("local", {
+// Configuring the login post functionality - I removed checkNotAuthenticated
+app.post("/login", passport.authenticate("local", {
     successRedirect: "/home",
     failureRedirect: "/login",
     failureFlash: true,
 }));
 
-// Configuring the register post functionality
-app.post("/register", checkNotAuthenticated, async (req, res) => {
+// Configuring the register post functionality - I removed checkNotAuthenticated,
+app.post("/register", async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         users.push({
@@ -70,17 +72,21 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
     }
 });
 
-// Routes
+// Routes fist and last is checkNotAuthenticated, 
 
-app.get("/home", checkAuthenticated, (req, res) => {
+app.get("/", (req, res) => {
+    return res.render("index.ejs");
+});
+
+app.get("/home", (req, res) => {
     res.render("home.ejs", { name: req.user.name });
 });
 
-app.get("/login", checkNotAuthenticated, (req, res) => {
+app.get("/login", (req, res) => {
     res.render("login.ejs");
 });
 
-app.get("/register", checkNotAuthenticated, (req, res) => {
+app.get("/register", (req, res) => {
     res.render("register.ejs");
 });
 
@@ -92,19 +98,21 @@ app.get("/logout", (req, res) => {
 // Serve static files from directories
 app.use(express.static(__dirname + "/public"));
 
-function checkAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next();
-    }
-    res.redirect("/login");
-}
 
-function checkNotAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-        return res.redirect("/");
-    }
-    next();
-}
+//Prevent going back to login page
+// function checkAuthenticated(req, res, next) {
+//     if (req.isAuthenticated()) {
+//         return next();
+//     }
+//     res.redirect("/login");
+// }
+
+// function checkNotAuthenticated(req, res, next) {
+//     if (req.isAuthenticated()) {
+//         return res.redirect("/login");
+//     }
+//     next();
+// }
 
 app.listen(3000, () => {
     console.log("Server listening on port 3000");

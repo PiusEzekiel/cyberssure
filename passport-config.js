@@ -8,7 +8,7 @@ function initialize(passport, getUserByEmail, getUserById){
         // Get users by email
         const user = getUserByEmail(email)
         if (user == null){
-            return done(null, false, {message: "Email not registered"})
+            return done(null, false, {message: "User Not Registered!"})
         }
         try {
             if (await bcrypt.compare(password, user.password)){
