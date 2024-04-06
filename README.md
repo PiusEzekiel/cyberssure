@@ -2,17 +2,42 @@
 
 CyberSSure is a comprehensive solution designed to enhance cybersecurity awareness and defense in the education sector. It equips institutions with the tools and knowledge necessary to combat the rising threat of cyber attacks.
 
-visit CyberSSure
+Visit CyberSSure: [https://cyberssurev2.onrender.com](https://cyberssurev2.onrender.com)
 
 ## Table of Contents
 
+- [Running CyberSSure Locally](#How-to-Run-CyberSSure-Locally)
 - [Introduction](#introduction)
 - [Course Offerings](#course-offerings)
 - [CyberSSure Games and Simulations](#games-and-simulations)
 - [Report Incidents](#report-incidents)
 - [Testimonials](#testimonials)
 - [About CyberSSure](#about-cyberssure)
-- [Contact Us](#contact-us)
+
+
+
+## How to Run CyberSSure Locally
+
+Follow these steps to run the CyberSSure project on your local machine:
+
+1. Make sure you have Node.js installed on your computer. If you don't have it, download and install Node.js from the official website: [https://nodejs.org](https://nodejs.org).
+
+2. Download the code for the CyberSSure project.
+
+3. Open a terminal or command prompt and navigate to the project directory.
+
+4. Install the project dependencies by running the following command:
+      - npm install
+      - This command will download and install the required packages specified in the project's package.json file.
+
+6. Start the server by running the following command:
+      - npm start
+      - This command will start the Node.js server and make it listen for incoming requests.
+
+6. Open a web browser and visit `http://localhost:3000` to access the CyberSSure website running on your local machine.
+
+That's it! You should now be able to run the CyberSSure project locally on your machine.
+
 
 ## Introduction
 
@@ -54,9 +79,6 @@ Read what CyberSSure users are saying about their experience with the project:
 
 CyberSSure is a leading cybersecurity company dedicated to educating and protecting educational institutions and individuals from digital threats. With a team of highly skilled experts and cutting-edge technology, CyberSSure provides comprehensive solutions to safeguard digital assets.
 
-## Contact Us
-
-For any inquiries or questions regarding the CyberSSure project, you can reach out to us at wizard@cyberssure.com. Additionally, you can follow us on Instagram and Twitter for the latest updates and cybersecurity insights.
 
 ---
 
